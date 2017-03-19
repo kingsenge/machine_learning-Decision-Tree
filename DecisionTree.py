@@ -57,28 +57,6 @@ def calMiniGini(sampleX,fList):
 
     return (minP,minFeature,minValue)
 
-sample = []
-sample.append((1,2,2,1,2))
-sample.append((1,2,2,2,2))
-sample.append((1,1,2,2,1))
-sample.append((1,1,1,1,1))
-sample.append((1,2,2,1,2))
-sample.append((2,2,2,1,2))
-sample.append((2,2,2,2,2))
-sample.append((2,1,1,2,1))
-sample.append((2,2,1,3,1))
-sample.append((2,2,1,3,1))
-sample.append((3,2,1,3,1))
-sample.append((3,2,1,2,1))
-sample.append((3,1,2,2,1))
-sample.append((3,1,2,3,1))
-sample.append((3,2,2,1,2))
-
-featurelist = []
-featurelist.append((0,1,2,3))
-featurelist.append((1,1,2))
-featurelist.append((2,1,2))
-featurelist.append((3,1,2,3))
 
 def sepSample(sampleX,featureIndex,featureValue):
     list1 = []
@@ -118,5 +96,28 @@ def constructTree(sampleX,featurelist):
     node.setRight(constructTree(newSample[1],featurelist))
 
     return node
+
+sample = []
+sample.append((1,2,2,1,2))
+sample.append((1,2,2,2,2))
+sample.append((1,1,2,2,1))
+sample.append((1,1,1,1,1))
+sample.append((1,2,2,1,2))
+sample.append((2,2,2,1,2))
+sample.append((2,2,2,2,2))
+sample.append((2,1,1,2,1))
+sample.append((2,2,1,3,1))
+sample.append((2,2,1,3,1))
+sample.append((3,2,1,3,1))
+sample.append((3,2,1,2,1))
+sample.append((3,1,2,2,1))
+sample.append((3,1,2,3,1))
+sample.append((3,2,2,1,2))
+
+featurelist = []
+featurelist.append((0,1,2,3))
+featurelist.append((1,1,2))
+featurelist.append((2,1,2))
+featurelist.append((3,1,2,3))
 
 constructTree(sample,featurelist)
